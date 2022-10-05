@@ -61,10 +61,10 @@ public class Maquina {
 
 	public void introduceImporte(double precio) {
 
-		if (monedas < precioBebida) {
+		if (monedas > precioBebida) {
 			this.precioBebida = this.precioBebida + monedas;
 		} else {
-			System.out.println("El importe tiene que ser mayor a 0€");
+			System.out.println("Le quedan por introducir monedas");
 		}
 
 	}
