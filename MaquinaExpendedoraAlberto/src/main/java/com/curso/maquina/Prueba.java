@@ -41,7 +41,7 @@ public class Prueba {
 		
 		switch(eleccion) {
 		
-		case 1://///////////////////COCACOLA
+		case 1://///////////////////COMPRA BEBIDA
 			System.out.println("Eligio " + cocaCola.getDescripcion() + "y el precio es de " + cocaCola.getPrecio() + "€");
 			System.out.println("El Stock restante es " + cocaCola.getStock());
 			maquinita.venta();

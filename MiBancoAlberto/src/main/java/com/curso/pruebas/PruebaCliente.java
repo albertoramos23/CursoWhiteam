@@ -2,6 +2,10 @@ package com.curso.pruebas;
 
 import com.curso.dominio.Cliente;
 import com.curso.dominio.Cuenta;
+import com.curso.dominio.Bank;
+
+
+
 
 public class PruebaCliente {
 
@@ -63,6 +67,37 @@ public class PruebaCliente {
 		System.out.println("Su saldo actual es de " + cuenta2.getBalance() + "€");
 		System.out.println("Gracias por usar el servicio " + cliente2.getNombre());
 		System.out.println("");
+		
+		
+		//////////////////////////////////////////////
+		
+		Cliente cliente = new Cliente("Jane","Simms");
+		Cliente cliente22 = new Cliente("Owen","Bryant");
+		Cliente cliente3 = new Cliente("Tim","Soley");
+		Cliente cliente4 = new Cliente("Maria","Soley");
+		Cliente cliente5 = new Cliente("Jane","Smith");
+		Cliente cliente6 = new Cliente("Alberto","Ramos");
+	
+		Cuenta dinero1 = new Cuenta(1789.90);
+		
+		///////////////////////////////////////////////////////////////////CLIENTES NUEVOS.
+		Bank banco = new Bank();
+		
+		banco.agregaCliente(cliente);
+		banco.agregaCliente(cliente22);
+		banco.agregaCliente(cliente3);
+		banco.agregaCliente(cliente4);
+		banco.agregaCliente(cliente5);
+		banco.agregaCliente(cliente6);
+		System.out.println("Los clientes totales del banco son: " + banco.getCantidadClientes());
+		
+		System.out.println(cliente.getNombre()+" "+cliente.getApellido()+"\n"+cliente22.getNombre()+" "+cliente22.getApellido()+
+				"\n"+cliente3.getNombre()+" "+cliente3.getApellido()+"\n"+cliente4.getNombre()+" "+cliente4.getApellido()+
+				"\n"+cliente5.getNombre()+" "+cliente.getApellido()+"\n"+cliente6.getNombre()+" "+cliente6.getApellido());
+		
+		///////////////////////////////////////////////////////////////////BUSCADOR CLIENTE
+		//System.out.println(banco.getClientes());
+		
 		
 		
 	}

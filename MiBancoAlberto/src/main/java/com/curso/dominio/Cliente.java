@@ -13,6 +13,14 @@ public class Cliente {
 		this.cuenta = cuenta;
 	}
 
+	public Cliente(String nombre, String apellido) {
+		this.nombre= nombre;
+		this.apellido= apellido;
+		
+	}
+	
+	
+	
 	public double getCuenta() {
 		return cuenta;
 	}
