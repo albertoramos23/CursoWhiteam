@@ -30,11 +30,11 @@ public class Bank {
 		return cantidadClientes;
 	}
 
-	public Cliente getClientes(Cliente[]clientes, String nombre , String apellido) {
+	public Cliente getClientes(Cliente[] clientes,String nombre , String apellido) {
 		
 		int numero = 0;
 		
-		Cliente clienteNuevo = new Cliente(apellido, apellido);
+		Cliente clienteNuevo = new Cliente(nombre, apellido);
 		
 		while(clientes!=null) {
 		
@@ -50,6 +50,13 @@ public class Bank {
 		
 	}
 
+	public Cliente getClientesIndex(int index) {
+		
+		return clientes[index];
+		
+	}
+	
+	
 	public void agregaCliente(Cliente cliente) {
 		// TODO Auto-generated method stub
 		int numero = cantidadClientes++;

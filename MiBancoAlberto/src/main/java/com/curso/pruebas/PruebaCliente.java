@@ -1,8 +1,6 @@
 package com.curso.pruebas;
 
-import com.curso.dominio.Cliente;
-import com.curso.dominio.Cuenta;
-import com.curso.dominio.Bank;
+import com.curso.dominio.*;
 
 
 
@@ -12,7 +10,25 @@ public class PruebaCliente {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 
-		Cliente cliente1 = new Cliente("Alberto","Ramos", 0.0);
+		
+		System.out.println("Customers Report");
+		System.out.println("");
+		
+		Bank banco = new Bank();
+		banco.agregaCliente("Simms","Jane");
+		
+		Cliente Jane = banco.getClientesIndex(0);
+		Cuenta cuenta1 = new CuentaAhorro(500.0,1);
+		Cuenta cuenta2 = new CuentaCorriente(500.0,2);
+		Jane.añadirCuenta(cuenta1);
+		Jane.añadirCuenta(cuenta2);
+		
+		
+		
+		
+		
+		
+		/*Cliente cliente1 = new Cliente("Alberto","Ramos", 0.0);
 		Cliente cliente2 = new Cliente("Jane","Smith", 0.0);
 	
 		Cuenta cuenta1 = new Cuenta(500.0);
@@ -69,7 +85,7 @@ public class PruebaCliente {
 		System.out.println("");
 		
 		
-		//////////////////////////////////////////////
+		////////////////////////////////////////////////////////////////////CLIENTES NUEVOS
 		
 		Cliente cliente = new Cliente("Jane","Simms");
 		Cliente cliente22 = new Cliente("Owen","Bryant");
@@ -96,8 +112,8 @@ public class PruebaCliente {
 				"\n"+cliente5.getNombre()+" "+cliente.getApellido()+"\n"+cliente6.getNombre()+" "+cliente6.getApellido());
 		
 		///////////////////////////////////////////////////////////////////BUSCADOR CLIENTE
-		//System.out.println(banco.getClientes());
-		
+		//System.out.println(banco.getClientes("Alberto"));
+		*/
 		
 		
 	}

@@ -3,17 +3,29 @@ package com.curso.dominio;
 public class Cuenta {
 
 ///////////////////////////////////////////////////////////////////////ATRIBUTOS
-	private double balance;
+	public double balance;
 
 ///////////////////////////////////////////////////////////////////////CONSTRUCTORES
 
 	public Cuenta(double saldoInicial) {
 		if (saldoInicial > 0) {
+			
 			this.balance = saldoInicial;
 		}
 	}
 
+	
+	
+	
 ////////////////////////////////////////////////////////////////////////MÉTODOS
+
+	public Cuenta(double balance , double saldoInicial) {
+		super();
+		this.balance = balance;
+	}
+
+
+
 
 	public double getBalance() {
 		return balance;
